@@ -1,0 +1,162 @@
+/* Visibilidade dos botões */
+.invisivel {
+  display: none;
+}
+.visivel {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.visivel:hover {
+  background-color: #ddd;
+}
+
+/* Estilo geral do corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #8a2be2; /* Azul-violeta como fundo */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das cartas */
+.inicial, .acertou, .errou {
+  display: inline-block;
+  text-align: center;
+  font-size: 100px;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cartas quando inicial */
+.inicial {
+  background-color: #f0f0f0;
+  border: 4px solid #4CAF50;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.inicial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de carta acertada */
+.acertou {
+  background-color: #69fd07;
+  border: 4px solid #37f6aa;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de carta errada */
+.errou {
+  font-size: 35px;
+  color: white;
+  background-color: #ff5a5a;
+  border: 4px solid #ff0000;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a imagem dentro da div "errou" */
+.errou img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cobre toda a div sem distorcer a imagem */
+  border-radius: 10px; /* Aplica bordas arredondadas à imagem */
+}
+
+.imagem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cobre toda a div sem distorcer a imagem */
+  border-radius: 10px; /* Aplica bordas arredondadas à imagem */
+}
+
+/* Estilo dos botões */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button#reiniciar {
+  background-color: #ff5a5a;
+  color: white;
+}
+button#reiniciar:hover {
+  background-color: #ff3333;
+}
+
+button#joganovamente {
+  background-color: #69fd07;
+  color: white;
+}
+button#joganovamente:hover {
+  background-color: #37f6aa;
+}
+
+/* Estilo do placar */
+#resposta {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.acertou {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  border: 15px solid rgb(55, 246, 170);
+  background-color: transparent; /* Remover a cor de fundo */
+  margin: 20px;
+  padding: 0; /* Remover o padding */
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+}
+
+/* Estilo para a imagem dentro da div acertou */
+.acertou img {
+  position: absolute; /* Posiciona a imagem de forma absoluta dentro da div */
+  top: 0;
+  left: 0;
+  width: 100%; /* Faz a imagem ocupar toda a largura da div */
+  height: 100%; /* Faz a imagem ocupar toda a altura da div */
+  object-fit: cover; /* Garante que a imagem cubra a div sem distorcer */
+  border-radius: 0; /* Remove qualquer arredondamento que a imagem possa ter */
+}
